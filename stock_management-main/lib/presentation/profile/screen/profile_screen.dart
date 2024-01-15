@@ -34,16 +34,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(7.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Container(
-              padding: const EdgeInsets.only(right: 260, top: 18),
+              padding: const EdgeInsets.only(right: 240, top: 18),
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'Add New Pick',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Add New Pick',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                   Text(
                     'P-#542651',
@@ -58,7 +64,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           SizedBox(
-            height: 5,
+            height: 10,
           ),
           Expanded(
             child: SingleChildScrollView(
@@ -71,27 +77,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 0),
-                        child: Text(
-                          'Location',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/Pin.png',
+                              width: 20,
+                              height: 20,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Location',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
+
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(22.0),
                     child: TextFormField(
                       decoration: InputDecoration(
                         labelText: 'Scan Qr For Location',
                         border: const OutlineInputBorder(),
                         contentPadding: const EdgeInsets.symmetric(
-                          vertical: 5.0,
-                          horizontal: 10.0,
+                          vertical: 1.0,
+                          horizontal: 5.0,
                         ),
-                        hintStyle: const TextStyle(fontSize: 10.0),
+                        hintStyle: const TextStyle(fontSize: 8.0),
                         hintText: 'Scan Qr For Location',
                         suffixIcon: GestureDetector(
                           child: Container(
@@ -114,6 +132,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       },
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,18 +142,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 0),
-                        child: Text(
-                          'Barcode',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/scanner.png',
+                              width: 20,
+                              height: 20,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Barcode',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
                         ),
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: TextFormField(
                       decoration: InputDecoration(
                         labelText: 'Scan Barcode',

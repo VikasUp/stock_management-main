@@ -123,10 +123,15 @@ class _DetailScreenState extends State<DetailScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Add New Pick',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Add New Pick',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                     Text(
                       'P-#542651',
@@ -187,7 +192,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
-                                        child: Text(
+                                        child: const Text(
                                           'ORDER Qty:80 pcs\nDelivered Qty:80pcs',
                                           style: TextStyle(
                                             fontSize: 12,
@@ -200,7 +205,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                       ),
                                       const SizedBox(width: 10),
                                       Container(
-                                        child: Column(
+                                        child: const Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
                                           crossAxisAlignment:

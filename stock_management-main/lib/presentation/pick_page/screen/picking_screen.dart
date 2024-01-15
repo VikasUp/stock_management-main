@@ -41,9 +41,16 @@ class _PickingPageScreenState extends State<PickingPageScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'Add New Pick',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Add New Pick',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                   Text(
                     'P-#542651',
@@ -71,12 +78,22 @@ class _PickingPageScreenState extends State<PickingPageScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 0),
-                        child: Text(
-                          'Location',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/Pin.png',
+                              width: 30,
+                              height: 30,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Location',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -116,12 +133,22 @@ class _PickingPageScreenState extends State<PickingPageScreen> {
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 15, vertical: 0),
-                        child: Text(
-                          'Barcode',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/scanner.png',
+                              width: 30,
+                              height: 30,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Barcode',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
                         ),
                       ),
                     ],

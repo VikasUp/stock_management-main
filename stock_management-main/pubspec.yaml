@@ -71,6 +71,7 @@ dependencies:
   flutter_barcode_sdk: ^2.2.6
   flutter_barcode_scanner: ^2.0.0
   barcode_scanner: ^3.6.2
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -109,7 +110,9 @@ flutter:
     - assets/images/pick.png
     - assets/images/picking_history.png
     - assets/images/delete.png
-    
+    - assets/images/Pin.png
+    - assets/images/scanner.png   
+    - assets/images/material.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

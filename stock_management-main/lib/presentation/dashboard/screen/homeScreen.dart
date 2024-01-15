@@ -20,10 +20,15 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'DASHBOARD',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'DASHBOARD',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -120,13 +125,13 @@ class HomeScreen extends StatelessWidget {
                           ),
                           ClipOval(
                             child: Container(
-                              width: 50,
-                              height: 50,
+                              width: 58,
+                              height: 58,
                               color: const Color(0xFF006064).withOpacity(0.1),
                               child: Image.asset(
                                 'assets/images/new_pick.png',
-                                width: 50,
-                                height: 50,
+                                width: 35,
+                                height: 35,
                               ),
                             ),
                           ),
@@ -162,13 +167,13 @@ class HomeScreen extends StatelessWidget {
                           ),
                           ClipOval(
                             child: Container(
-                              width: 50,
-                              height: 50,
+                              width: 58,
+                              height: 58,
                               color: const Color(0xFF006064).withOpacity(0.1),
                               child: Image.asset(
                                 'assets/images/picking_history.png',
-                                width: 50,
-                                height: 50,
+                                width: 35,
+                                height: 35,
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
@@ -179,7 +184,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Center(
                 child: Container(
                   width: double.infinity,
@@ -212,7 +217,7 @@ class HomeScreen extends StatelessWidget {
                           color: const Color(0xFF006064).withOpacity(0.9),
                           child: Center(
                             child: Image.asset(
-                              'assets/images/dashboard_1.png',
+                              'assets/images/material.png',
                               width: 35,
                               height: 35,
                               color: Colors.white,

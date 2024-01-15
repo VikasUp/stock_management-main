@@ -9,10 +9,7 @@ import 'package:stock_management/presentation/pick_page/screen/picking_screen.da
 import 'package:stock_management/presentation/profile/screen/profile_screen.dart';
 
 Future<void> main() async {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
-  // await initBarcodeSDK();
-  runApp(const MyApp());
+   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

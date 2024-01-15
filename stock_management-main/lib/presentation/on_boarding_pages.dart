@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stock_management/data/model/on_board_modal.dart';
-import 'package:stock_management/presentation/dashboard/screen/dashboard_screen.dart';
+import 'package:stock_management/presentation/log_in/login_screen.dart';
 
 final List<OnBoard> demoData = [
   OnBoard(
@@ -20,7 +20,7 @@ final List<OnBoard> demoData = [
 ];
 
 class OnBoardingScreen extends StatefulWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+  OnBoardingScreen({Key? key}) : super(key: key);
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
@@ -107,8 +107,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const DashBoardScreen()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
                   child: Container(

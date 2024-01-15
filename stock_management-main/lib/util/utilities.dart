@@ -3,9 +3,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show MethodChannel, rootBundle;
-import 'package:stock_management/core/constant/strings.dart';
-import 'package:stock_management/util/logger.dart';
 
+import 'package:stock_management/util/logger.dart';
 
 const kAlert = "Alert";
 const kStart = "Start";
@@ -34,12 +33,6 @@ class Utilities {
         .then((jsonStr) => jsonDecode(jsonStr));
   }
 
-  static Future<String?> getDeviceIdentifier() async {
-    final deviceId = await MethodChannel(SKYStrings.channel.kApp)
-        .invokeMethod<String>(SKYStrings.channelMethod.kDeviceId);
-    return deviceId;
-  }
-
   ///Enum to String function
   static String enumToString(Object o) => describeEnum(o);
 
@@ -47,8 +40,4 @@ class Utilities {
   static T enumFromString<T>(String key, List<T> values) => values.firstWhere(
         (v) => key == enumToString(v!),
       );
-  }
-
-  
- 
-
+}

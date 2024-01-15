@@ -119,9 +119,15 @@ class _ManagementScreenState extends State<ManagementScreen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'Material Check',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Material Check',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -134,19 +140,29 @@ class _ManagementScreenState extends State<ManagementScreen> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 0),
-                        child: Text(
-                          'Material No./Barcode',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/scanner.png',
+                              width: 30,
+                              height: 30,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Material No./Barcode',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
+                            ),
+                          ],
                         ),
                       ),
                     ],

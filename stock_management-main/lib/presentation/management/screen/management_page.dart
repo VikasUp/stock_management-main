@@ -117,12 +117,18 @@ class _ManagementScreenPageState extends State<ManagementScreenPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'Result',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Result',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                   Text(
-                    'Scan a barcode',
+                    'M-#537928',
                     style: TextStyle(
                       color: Colors.teal,
                       fontWeight: FontWeight.bold,
@@ -132,22 +138,24 @@ class _ManagementScreenPageState extends State<ManagementScreenPage> {
               ),
             ),
           ),
-          const Expanded(
+          Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 10),
                     child: Row(
                       children: [
                         Expanded(
-                          child: SizedBox(
-                            height: 25,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(width: 5),
-                              ],
+                          child: Center(
+                            child: SizedBox(
+                              height: 100,
+                              width: 100,
+                              child: Image.asset(
+                                'assets/images/your_image.png',
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                         ),
@@ -158,6 +166,7 @@ class _ManagementScreenPageState extends State<ManagementScreenPage> {
               ),
             ),
           ),
+          Text('Material Description'),
         ],
       ),
     );

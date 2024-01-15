@@ -8,7 +8,6 @@ import 'package:stock_management/presentation/profile/screen/profile_screen.dart
 class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({super.key});
   @override
-  // ignore: library_private_types_in_public_api
   _DashBoardScreenState createState() => _DashBoardScreenState();
 }
 
@@ -26,6 +25,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     PickingPageScreen(),
     HistoryScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -89,7 +89,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.only(top: 2.0),
+                            padding: EdgeInsets.only(top: 1.0),
                             child: Text(
                               'MS.SABA',
                               style: TextStyle(
